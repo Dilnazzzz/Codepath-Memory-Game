@@ -40,6 +40,8 @@ The following **additional** features are implemented:
 - [ + ] A questions button with the game rules appearing as an alert message
 - [ + ] An alert message when a player plays the sequence correctly
 - [ + ] An alert message when a player makes mistake, showing the number of mistakes already made 
+- [ + ] Sounds played when the player loses or wins the game. 
+- [ + ] Feedback page to collect reviews on the game and how to improve it 
 
 
 ## Video Walkthrough (GIF)
@@ -83,7 +85,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-[YOUR ANSWER HERE]
+[Stack Overflow (debugging), W3Schools (putting background image), YouTube (JavaScript tutorials)]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 [YOUR ANSWER HERE]
