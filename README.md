@@ -39,7 +39,8 @@ The following **additional** features are implemented:
 
 - [ + ] A questions button with the game rules appearing as an alert message
 - [ + ] An alert message when a player plays the sequence correctly
-- [ + ] An alert message when a player makes mistake, showing the number of mistakes already made 
+- [ + ] An alert message when a player makes a mistake, showing the number of mistakes already made 
+- [ + ] A tracking system which shows the number of mistakes and successful clue combinations 
 
 
 ## Video Walkthrough (GIF)
@@ -77,18 +78,23 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ![](https://i.imgur.com/9TFsbfW.gif)
 
+9. Player can see the rules of the game by clicking the questions button. There are also alert messages when a player plays the sequence correctly or makes a mistake. There is also a tracking system which shows the number of mistakes and successful clue combinations.
+
+![](https://i.imgur.com/EElhe0N.gif)
+
+
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-[YOUR ANSWER HERE]
+[I used stackoverflow.com and w3schools.com debugging my code and implement new features. For example, I found a page explaining how to put a picture on the button in W3Schools and add sounds in JavaScript in Stack Overflow.]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+[The moost challenging part was to add sounds to the button when they are clicked.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+[I have questions about optimization. Are there frameworks that make it easier to put tables and a lot of infomration.]
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+[I would add the leaders board where the best three performances are listed. Also I would add the time. Also I will add different game modes with mistakes and without, time and no time. Only sound with no sound just lit up. ]
 
 
 
