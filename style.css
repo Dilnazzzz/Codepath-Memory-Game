@@ -1,0 +1,119 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 30px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #91c7b1;
+  color: #b33951;
+  text-align: center;
+}
+
+h1 {
+  font-family: verdana, arial, sans-serif;
+  color: #54494b;
+  text-align: center;
+}
+
+#questionsbutton {
+  padding: 30px;
+  background-image: url("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/png-transparent-algorithm-website-orange-question-mark-text-trademark-logo.png?v=1648195116544");
+  background-size: 80px;
+  text-align: right;
+  background-position: center;
+}
+
+button {
+  padding: 30px;
+  border-radius: 40px;
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: center;
+  position: relative;
+  margin: 10px;
+}
+
+#gameButtonArea > button {
+  width: 230px;
+  height: 220px;
+  margin: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#button1 {
+  background: lightgreen;
+}
+
+#button2 {
+  background: lightblue;
+}
+
+#button3 {
+  background: pink;
+}
+
+#button4 {
+  background: lightyellow;
+}
+
+#button5 {
+  background: lavender;
+}
+
+#button1:active,
+#button1.lit {
+  background: green;
+  background-image: url("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/Screen%20Shot%202022-03-24%20at%2014.39.15.png?v=1648129174854");
+  background-size: 210px;
+}
+
+#button2:active,
+#button2.lit {
+  background: blue;
+  background-image: url("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/Screen%20Shot%202022-03-24%20at%2014.38.57.png?v=1648129178525");
+  background-size: 210px;
+}
+
+#button3:active,
+#button3.lit {
+  background: red;
+  background-image: url("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/Screen%20Shot%202022-03-24%20at%2014.38.52.png?v=1648129180739");
+  background-size: 200px;
+}
+
+#button4:active,
+#button4.lit {
+  background: yellow;
+  background-image: url("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/Screen%20Shot%202022-03-24%20at%2021.21.00.png?v=1648153276224");
+  background-size: 226px;
+}
+
+#button5:active,
+#button5.lit {
+  background: indigo;
+  background-image: url("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/Screen%20Shot%202022-03-24%20at%2014.39.08.png?v=1648129663431");
+  background-size: 210px;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
