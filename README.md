@@ -85,13 +85,27 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
+
 [Stack Overflow (debugging), W3Schools (putting background image), YouTube (JavaScript tutorials)]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
+
 [Firstly, I had difficulties with having an image on buttons. Firstly, I put the picture in HTML on the button and hid it with <img> tag as was suggested. However, I had a hard time making it visible when the game button was pressed. I played around visibility: visible/hidden and hidden: none/block features and tried to change them in onClick on buttons. Nevertheless, I found the solution by putting the image as a background image (background-image) in CSS. Subsequently, since there is a rule for #button2:active, #button2.lit I added the background-image under the background color change, which gave the expected results. It also looks visually more pleasing as otherwise there could have been colored background lit images. Secondly, another difficulty relates to the sound, which requires around two hours to debug. I put the sound URLs in the array similar to frequencies and used indices to refer to them while calling the play() function. I found animal sounds online and cut them to make them 2 seconds long.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+[-	I would add the leaders' board where the best ten performances are listed based on time, accuracy, and number of mistakes. One could make the board international by collecting all statistics in the world. I could use cookies or databases.
+-	I would add a timer so that users have 10 seconds to repeat each sequence. If they make a mistake, the timer decreases by two seconds. Once the timer is zero, the player automatically loses.  
+-	I would add three game modes based on their difficulty. Easy mode has 3 buttons and 5 sequences, medium - 5 buttons and 7 sequences, hard - 9 buttons and 7 sequences. There would be a flexible mode where players choose the number of buttons and sequence. 
+-	There would also be a setting tab where players can change the timer duration, turn on/off sound, and change the style of pictures. 
+-	I would also ensure that anyone can comprehend and reproduce the code. Writing comments and docstrings would achieve this. 
+-	I would also like the game to be user-friendly in all devices. Thus, I need to make the sizes of the button adjustable for tablets, phones, and large screens. 
+-	I would attempt using guitar or piano sounds to train the musical hearing skills of users. One can memorize famous melodies with the help of this memory game. 
+-	I would also reduce the amount of code since it has many variables and repetitive code that can be simplified. 
+-	To make the game more inclusive, I could add the colorblind mode, making it accessible to more users. 
+-	I would improve my rules button to have concise instructions on playing the game. The rules should explain the game's goal, how to play it, and use the setting button.
+![image](https://user-images.githubusercontent.com/76237763/160293774-1491f6ef-bf76-492f-aab0-54090c2e70fe.png)
+]
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 [YOUR ANSWER HERE]
