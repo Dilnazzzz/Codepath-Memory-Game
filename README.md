@@ -7,9 +7,9 @@ I created Light and Sound Memory Game as a part of Codepath prework
 
 Submitted by: **Dilnaz Baltabayeva**
 
-Time spent: **6** hours spent in total
+Time spent: **8** hours spent in total
 
-Link to project: https://github.com/Dilnazzzz/Codepath-Memory-Game
+Link to project: https://glitch.com/edit/#!/coal-judicious-cattle
 
 ## Required Functionality
 
@@ -88,7 +88,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 [Stack Overflow (debugging), W3Schools (putting background image), YouTube (JavaScript tutorials)]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+[Firstly, I had difficulties with having an image on buttons. Firstly, I put the picture in HTML on the button and hid it with <img> tag as was suggested. However, I had a hard time making it visible when the game button was pressed. I played around visibility: visible/hidden and hidden: none/block features and tried to change them in onClick on buttons. Nevertheless, I found the solution by putting the image as a background image (background-image) in CSS. Subsequently, since there is a rule for #button2:active, #button2.lit I added the background-image under the background color change, which gave the expected results. It also looks visually more pleasing as otherwise there could have been colored background lit images. Secondly, another difficulty relates to the sound, which requires around two hours to debug. I put the sound URLs in the array similar to frequencies and used indices to refer to them while calling the play() function. I found animal sounds online and cut them to make them 2 seconds long.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 [YOUR ANSWER HERE]
