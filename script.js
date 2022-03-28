@@ -128,7 +128,7 @@ function playClueSequence() {
     setTimeout(playSingleClue, delay, pattern[i]); // set a timeout to play that clue
     delay += clueHoldTime;
     delay += cluePauseTime;
-    clueHoldTime -= 300; //how long to hold each clue's light/sound
+    clueHoldTime -= 150; //how long to hold each clue's light/sound
   }
 }
 
