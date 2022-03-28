@@ -7,9 +7,9 @@ I created Light and Sound Memory Game as a part of Codepath prework
 
 Submitted by: **Dilnaz Baltabayeva**
 
-Time spent: **8** hours spent in total
+Time spent: **6** hours spent in total
 
-Link to project: https://glitch.com/edit/#!/coal-judicious-cattle
+Link to project: https://github.com/Dilnazzzz/Codepath-Memory-Game
 
 ## Required Functionality
 
@@ -88,11 +88,24 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 [Stack Overflow (debugging), W3Schools (putting background image), YouTube (JavaScript tutorials)]
 
-2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
+2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words)
 
-[Firstly, I had difficulties with having an image on buttons. Firstly, I put the picture in HTML on the button and hid it with <img> tag as was suggested. However, I had a hard time making it visible when the game button was pressed. I played around visibility: visible/hidden and hidden: none/block features and tried to change them in onClick on buttons. Nevertheless, I found the solution by putting the image as a background image (background-image) in CSS. Subsequently, since there is a rule for #button2:active, #button2.lit I added the background-image under the background color change, which gave the expected results. It also looks visually more pleasing as otherwise there could have been colored background lit images. Secondly, another difficulty relates to the sound, which requires around two hours to debug. I put the sound URLs in the array similar to frequencies and used indices to refer to them while calling the play() function. I found animal sounds online and cut them to make them 2 seconds long.]
+[Firstly, I had problems adding an image to the button since my image did not appear when pressed. My initial approach was using <img> tag between <button> and </button> and putting its visibility to invisible. When I connected it to CSS, I realized changing visibility to visible under #button2:active, #button2.lit does not work. Nevertheless, I found another solution by putting the image as a background image ( background-image: URL("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/png-transparent-algorithm-website-orange-question-mark-text-trademark-logo.png?v=1648195116544")) under the #button2:active, #button2.lit rule in CSS. Subsequently, it gave the expected results. It also looks visually more pleasing as otherwise, there could have been colored background around the image when pressed.]
+[Secondly, I spent two hours debugging the sound to replace the original frequencies with animal sounds. I put links to the five audios in the array similar to frequencies and used indices to refer to them while calling the play() function. I found animal sounds online and cut them until they are 2 seconds long. However, the problem was the unimportance of variables o and g and adapting the code. I decided to go line by line on what code does when I press the start button. Printing to the console the variables in the function such as progress, gamePlaying, guessCounter, and tonePlaying helped me find the functions that were not working correctly. 
+[Thirdly, I had a problem accelerating the sequence speed. I noticed that when I cut 100ms from clueHoldTime each time the button is played, the sound suddenly disappears after the fourth sequence, which I realized is due to the clueHoldTime becoming too low, which makes the sound quick and muted. Rather than decreasing the amount by which clueHoldTime decreases with each clue played, I decided to reassign the clueHoldTime to its original value of 2000ms every time before the loop starts. Since there are eight clues in the last round, 2000 / 8 gives 225ms of playtime per each clue. Thus, I set the decrease time to 150ms, which is plausible given that I want to make the game more difficult but still possible to win.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
+
+[I have questions about code optimization and making it more efficient. For example, putting the start/stop, scoreboard, and game rules buttons under the game button took me half an hour to put at an equal distance from each other. So, I wondered about frameworks and external tools that could make positioning tables and extensive information easier. Also, I wondered how one could store, edit and retrieve data. For example, if I want to create a leadership board, I want to save the performances and the highest results and show them on the website. Here, I am curious about the limitations of just working in the front and how combining with the backend would improve usability and scalability. Specifically, since I use Python for machine learning and backend, I am excited about bridging my current knowledge working on both sides. Using multiple data structures (trees for and hashtables for data extraction) and algorithms (sorting the data with quicksort), I am excited about implementing these algorithms in real projects. I also have the following questions:
+-	How do object-oriented programming methods, including inheritance and encapsulation, work in JavaScript? 
+-	What are the limitations of JavaScript that cannot be solved and thus require the adaptation of other tools? 
+-	How can we improve the website visuals to be more appropriate for the potential audience? 
+-	Why is there a lack of debugging facilities in HTML and CSS or their inefficiencies compared to C/C++ editors? How can we address the problem of browsers not showing where the errors are?
+-	How come JavaScript does not support multiple inheritances but only single?
+-	How can we protect client-side security and code authentication, given that some may use viewable JavaScript code for unsafe purposes?
+]
+
+4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 
 [-	I would add the leaders' board where the best ten performances are listed based on time, accuracy, and number of mistakes. One could make the board international by collecting all statistics in the world. I could use cookies or databases.
 -	I would add a timer so that users have 10 seconds to repeat each sequence. If they make a mistake, the timer decreases by two seconds. Once the timer is zero, the player automatically loses.  
@@ -103,12 +116,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 -	I would attempt using guitar or piano sounds to train the musical hearing skills of users. One can memorize famous melodies with the help of this memory game. 
 -	I would also reduce the amount of code since it has many variables and repetitive code that can be simplified. 
 -	To make the game more inclusive, I could add the colorblind mode, making it accessible to more users. 
--	I would improve my rules button to have concise instructions on playing the game. The rules should explain the game's goal, how to play it, and use the setting button.
-![image](https://user-images.githubusercontent.com/76237763/160293774-1491f6ef-bf76-492f-aab0-54090c2e70fe.png)
-]
-
-4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+-	I would improve my rules button to have concise instructions on playing the game. The rules should explain the game's goal, how to play it, and use the setting button.]
 
 
 

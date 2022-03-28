@@ -49,7 +49,7 @@ button {
 #gameButtonArea > button {
   width: 230px;
   height: 220px;
-  margin: 10px;
+  margin: 20px;
 }
 
 .hidden {
@@ -110,6 +110,20 @@ button {
   background-image: url("https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/Screen%20Shot%202022-03-24%20at%2014.39.08.png?v=1648129663431");
   background-size: 210px;
 }
+
+
+
+
+input[type=submit] {    
+  background-color: #54494b;    
+  color: lightyellow;    
+  padding: 12px 20px;    
+  border: none;    
+  border-radius: 4px;    
+  cursor: pointer;    
+  float: right;    
+}    
+    
 
 /* images and videos max out at full width */
 img,

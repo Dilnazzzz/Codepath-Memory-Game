@@ -1,5 +1,3 @@
-/* If you're feeling fancy you can add interactivity 
-    to your site with Javascript */
 
 // global constants
 const cluePauseTime = 333; //how long to pause in between clues
@@ -28,7 +26,7 @@ function startGame() {
   progress = 0;
   mistakes = 0;
   gamePlaying = true;
-  // swap the Start and Stop buttons
+  //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   playClueSequence();
@@ -37,22 +35,12 @@ function startGame() {
 function stopGame() {
   //initialize game variables
   gamePlaying = false;
-  // swap the Start and Stop buttons
+  //swap the Start and Stop buttons
   document.querySelector("#progress").innerHTML = 0;
   document.querySelector("#mistakes").innerHTML = 0;
-  // document.querySelector()
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
 }
-
-// Sound Synthesis Functions
-const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2,
-  5: 360,
-};
 
 const sounds = [
   new Audio(
@@ -72,23 +60,26 @@ const sounds = [
   ),
 ];
 
+const gamesounds = [
+  new Audio(
+    "https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/game-lose.mp3?v=1648322746173"
+  ),
+  new Audio(
+    "https://cdn.glitch.global/9f6c1cbc-87fa-4713-8a82-9d52c6880ad8/game-win-sound-effect.mp3?v=1648322961429"
+  ),
+];
+
 function playTone(btn, len) {
-  // o.frequency.value = freqMap[btn];
   sounds[btn - 1].play();
   g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025);
   context.resume();
   tonePlaying = true;
-  //setTimeout(function () {
-  //stopTone();
-  //}, len);
 }
 
 function startTone(btn) {
   if (!tonePlaying) {
     context.resume();
-    // o.frequency.value = freqMap[btn];
     sounds[btn - 1].play();
-
     g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025);
     context.resume();
     tonePlaying = true;
@@ -104,13 +95,10 @@ function stopTone() {
 // Init Sound Synthesizer
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var context = new AudioContext();
-//var o = context.createOscillator();
 var g = context.createGain();
 
 g.connect(context.destination);
 g.gain.setValueAtTime(0, context.currentTime);
-//o.connect(g);
-//o.start(0);
 
 function lightButton(btn) {
   document.getElementById("button" + btn).classList.add("lit");
@@ -140,7 +128,7 @@ function playClueSequence() {
     setTimeout(playSingleClue, delay, pattern[i]); // set a timeout to play that clue
     delay += clueHoldTime;
     delay += cluePauseTime;
-    clueHoldTime -= 300; //how long to hold each clue's light/sound
+    clueHoldTime -= 150; //how long to hold each clue's light/sound
   }
 }
 
@@ -154,11 +142,13 @@ function loseGame() {
   document.querySelector("#progress").innerHTML = 0;
   document.querySelector("#mistakes").innerHTML = 0;
   stopGame();
+  gamesounds[0].play();
   alert("Game Over. You lost.");
 }
 
 function winGame() {
   stopGame();
+  gamesounds[1].play();
   alert("Game Over. You won.");
 }
 
@@ -180,7 +170,6 @@ function guess(btn) {
         alert("Good job! Next clue playing. Listen carefully.");
         progress++;
         document.querySelector("#progress").innerHTML = progress;
-
         playClueSequence();
       }
     } else {
@@ -196,16 +185,11 @@ function guess(btn) {
         " mistakes. Remember you can make only 3 mistakes before you lose. The sequence is playing again. Listen carefully."
     );
     console.log("mistakes:" + mistakes);
-
     if (mistakes == 3) {
       loseGame();
     } else {
       playClueSequence();
     }
-    //Guess was incorrect
-    //GAME OVER: LOSE!
-    // loseGame();
-  }
 
-  // add game logic here
+  }
 }
