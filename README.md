@@ -119,7 +119,7 @@ I have questions about code optimization and making it more efficient. For examp
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://youtu.be/FdKuIdDYviU)
 
 
 ## License
